@@ -5,19 +5,23 @@ namespace Baidu\Bae;
 /**
  * Container for all response-related methods.
  */
-class ResponseCore {
+class ResponseCore
+{
     /**
      * Stores the HTTP header information.
      */
     public $header;
+
     /**
      * Stores the SimpleXML response.
      */
     public $body;
+
     /**
      * Stores the HTTP response code.
      */
     public $status;
+
     /**
      * Constructs a new instance of this class.
      *
@@ -42,8 +46,8 @@ class ResponseCore {
      */
     public function isOK($codes = array(200, 201, 204, 206))
     {
-        if (is_array ( $codes )) {
-            return in_array ( $this->status, $codes );
+        if (is_array($codes)) {
+            return in_array($this->status, $codes);
         }
         return $this->status === $codes;
     }
