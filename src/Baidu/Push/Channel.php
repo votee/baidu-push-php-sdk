@@ -82,11 +82,15 @@ class Channel extends BaeBase
     /**
      * 设备类型
      *
-     * 1：浏览器设备；2：PC设备；3：andorid设备
+     * 1：浏览器设备；2：PC设备；3：android设备；4：ios设备
      *
      * @var int DEVICE_TYPE
      */
     const DEVICE_TYPE = 'device_type';
+    const DEVICE_TYPE_BROWSER = 1;
+    const DEVICE_TYPE_PC = 2;
+    const DEVICE_TYPE_ANDROID = 3;
+    const DEVICE_TYPE_IOS = 4;
 
     /**
      * 第几页
@@ -113,6 +117,7 @@ class Channel extends BaeBase
      */
     const MSG_IDS = 'msg_ids';
     const MSG_KEYS = 'msg_keys';
+    const MSG_KEY = 'msg_key';
     const IOS_MESSAGES = 'ios_messages';
     const WP_MESSAGES = 'wp_messages';
 
@@ -124,6 +129,8 @@ class Channel extends BaeBase
      * @var int MESSAGE_TYPE
      */
     const MESSAGE_TYPE = 'message_type';
+    const MESSAGE_TYPE_DEFAULT = 0;
+    const MESSAGE_TYPE_NOTIFICATION = 1;
 
     /**
      * 消息超时时间
@@ -139,6 +146,8 @@ class Channel extends BaeBase
      * 若不指定，默认为生产状态
      */
     const DEPLOY_STATUS = 'deploy_status';
+    const DEPLOY_STATUS_DEV = 1;
+    const DEPLOY_STATUS_PROD = 2;
 
     /**
      * 消息标签名称
