@@ -551,7 +551,6 @@ class RequestCore
         curl_setopt($curl_handle, CURLOPT_FRESH_CONNECT, false);
         curl_setopt($curl_handle, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl_handle, CURLOPT_SSL_VERIFYHOST, 2);
-        curl_setopt($curl_handle, CURLOPT_CLOSEPOLICY, CURLCLOSEPOLICY_LEAST_RECENTLY_USED);
         curl_setopt($curl_handle, CURLOPT_MAXREDIRS, 5);
         curl_setopt($curl_handle, CURLOPT_HEADER, true);
         curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
