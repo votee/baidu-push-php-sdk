@@ -349,7 +349,7 @@ class Channel extends BaeBase
         $this->_resetErrorStatus();
         try {
             if (is_array($arr_curlOpts)) {
-                $this->_curlOpts = $this->_curlOpts + $arr_curlOpts;
+                $this->_curlOpts = array_replace($this->_curlOpts, $arr_curlOpts);
             } else {
                 throw new ChannelException(
                     'invalid param - arr_curlOpts is not an array ['
@@ -867,7 +867,7 @@ class Channel extends BaeBase
                 self::CHANNEL_SDK_INIT_FAIL
             );
         }
-        $this->_curlOpts = $this->_curlOpts + $arr_curlOpts;
+        $this->_curlOpts = array_replace($this->_curlOpts, $arr_curlOpts);
 
         $this->_resetErrorStatus();
     }
